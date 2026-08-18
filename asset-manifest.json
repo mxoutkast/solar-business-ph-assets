@@ -1,0 +1,11 @@
+{
+  "brand": "Solar Business Philippines",
+  "assets": [
+    {
+      "postId": "post-01-welcome",
+      "network": "facebook",
+      "mediaUrl": "https://raw.githubusercontent.com/mxoutkast/solar-business-ph-assets/main/posts/2026/08/post-01-welcome.png",
+      "altText": "Two solar technicians wearing proper safety equipment install rooftop solar panels in the Philippines. Text reads: Welcome to Solar Business Philippines."
+    }
+  ]
+}
