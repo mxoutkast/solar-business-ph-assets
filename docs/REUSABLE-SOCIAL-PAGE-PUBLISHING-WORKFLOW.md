@@ -98,7 +98,7 @@ GitHub is the media delivery layer. Metricool receives public raw file URLs, fet
 
 This document uses one primary automation path so an agent does not have to choose among several incomplete alternatives:
 
-1. Content and image production in the private campaign workspace
+1. GPT image generation and content production in the private campaign workspace
 2. Git and authenticated GitHub CLI for public asset upload
 3. A connected Metricool agent connector for schedule reads and writes
 4. Metricool schedule retrieval for reconciliation
@@ -112,7 +112,7 @@ If the Metricool connector is unavailable, the automated procedure stops at the 
 3. A GitHub account and public asset repository
 4. Git installed and GitHub CLI authenticated for the repository
 5. A Metricool connector that can read and create scheduled posts
-6. An image generation or design tool that can export PNG and JPG
+6. GPT image generation or an equivalent image tool that can export PNG and JPG
 7. A private working folder where campaign files are retained
 8. A way to validate JSON, HTTPS responses, and image files
 
@@ -130,7 +130,7 @@ If the Metricool connector is unavailable, the automated procedure stops at the 
 - Google Drive for internal briefs, approvals, and private source documents
 - A separate private repository for automation scripts
 
-Canva is the recommended repeatable design layer when a subscription is available. It does not replace GitHub asset hosting or Metricool scheduling in the primary tested tool path.
+Canva is optional. Use it only when template consistency, collaborative review, or a single batch export is more important than the stronger custom visuals produced by GPT image generation. It does not replace GitHub asset hosting or Metricool scheduling in the primary tested tool path.
 
 Canva Autofill requires an Enterprise plan and a Brand Template with non-empty data fields. A normal Canva Pro subscription still provides a strong batch workflow through Brand Kit, a multi-page master design, duplication, review, and one-batch export.
 
@@ -419,9 +419,9 @@ Requirements:
 
 Generate one image first and approve the visual system before producing the full batch.
 
-### Step 6A: Canva production path
+### Step 6A: Optional Canva production path
 
-Use Canva to standardize layout and reduce design variation across a page.
+Use Canva only when the page benefits from a fixed template system or Canva-based team review. The default workflow uses GPT-generated images because they produced the stronger results in the Solar Business Philippines reference implementation.
 
 #### Canva Pro path
 
@@ -838,6 +838,7 @@ The Solar Business Philippines implementation validated the following approach:
 - A public GitHub repository supplied raw HTTPS image URLs.
 - GitHub CLI successfully handled publishing when connector-based binary uploads were restricted.
 - Source PNGs were retained and JPGs were used for publishing.
+- GPT image generation was retained as the primary visual production method, with Canva documented as optional.
 - Metricool scheduling was verified by retrieving the final date range and recording schedule IDs.
 - A 22-post batch was created and verified with zero scheduling errors.
 
